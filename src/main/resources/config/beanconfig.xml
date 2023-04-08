@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Inline4Engine" class="org.src.dto.engine.impl.Inline4Engine">
+        <!-- Bean instantiation using constructor arguments - Constructor Injection -->
+        <constructor-arg index="0" value="344"/>
+        <constructor-arg index="1" value="290"/>
+        <constructor-arg index="2" value="14"/>
+    </bean>
+    <bean id="V6Engine" class="org.src.dto.engine.impl.V6Engine">
+        <!-- Bean instantiation by setting up properties individually - Setter Injection -->
+        <property name="horsePower" value="432"></property>
+        <property name="torque" value="874"></property>
+        <property name="fuelEconomy" value="9"></property>
+    </bean>
+
+    <bean id="SedanCar" class="org.src.dto.vehicle.impl.SedanCar">
+        <property name="manufacturer" value="Honda"></property>
+        <property name="model" value="Civic iVTEC Turbo"></property>
+        <property name="dateOfManufacture" value="23/12/2009"></property>
+        <property name="exShowroomPrice" value="3298777"></property>
+    </bean>
+
+    <bean id="F1Car" class="org.src.dto.vehicle.impl.F1Car">
+        <property name="manufacturer" value="Mercedes Benz"></property>
+        <property name="model" value="X6100 Supercharged"></property>
+        <property name="dateOfManufacture" value="04/11/2019"></property>
+        <property name="exShowroomPrice" value="1109823"></property>
+        <!-- Object Injection - using refs -->
+        <property name="engine" ref="V6Engine"></property>
+    </bean>
+
+</beans>

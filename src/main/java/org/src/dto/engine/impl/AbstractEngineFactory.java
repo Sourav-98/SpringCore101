@@ -1,14 +1,28 @@
-package org.src.dto.impl;
+package org.src.dto.engine.impl;
 
-public class V6Engine extends AbstractEngine {
+import org.src.dto.engine.api.Engine;
+
+import java.io.Serializable;
+
+public abstract class AbstractEngineFactory implements Engine, Serializable {
 
     private Integer horsePower;
     private Integer torque;
     private Integer fuelEconomy;
 
+    public AbstractEngineFactory() {
+
+    }
+
+    public AbstractEngineFactory(Integer horsePower, Integer torque, Integer fuelEconomy) {
+        this.horsePower = horsePower;
+        this.torque = torque;
+        this.fuelEconomy = fuelEconomy;
+    }
+
     @Override
     public Integer getHorsePower() {
-        return null;
+        return horsePower;
     }
 
     @Override
@@ -18,7 +32,7 @@ public class V6Engine extends AbstractEngine {
 
     @Override
     public Integer getTorque() {
-        return null;
+        return torque;
     }
 
     @Override
@@ -28,11 +42,14 @@ public class V6Engine extends AbstractEngine {
 
     @Override
     public Integer getFuelEconomy() {
-        return null;
+        return fuelEconomy;
     }
 
     @Override
     public void setFuelEconomy(Integer fuelEconomy) {
         this.fuelEconomy = fuelEconomy;
     }
+
+
+
 }
