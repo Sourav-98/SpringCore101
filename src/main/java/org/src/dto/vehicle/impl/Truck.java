@@ -1,6 +1,7 @@
 package org.src.dto.vehicle.impl;
 
 import org.src.dto.engine.api.Engine;
+import org.src.dto.engine.impl.Inline6Engine;
 
 public class Truck extends AbstractVehicleFactory {
 

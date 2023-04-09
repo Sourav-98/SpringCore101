@@ -5,28 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e055a10-3cef-424e-91d6-bd81d0eb04ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/controllers/api/EngineController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/controllers/api/VehicleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/engine/impl/AbstractEngineFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/engine/impl/Inline4Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/engine/impl/Inline6Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/engine/impl/V6Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/AbstractVehicleFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/F1Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/SedanCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/Truck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/beanconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/garage/api/Garage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/garage/impl/AbstractGarageFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/shapes/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/shapes/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/src/util/commons/AppContextScope.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/controllers/api/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/controllers/api/DefaultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/src/controllers/impl/DefaultControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/controllers/impl/DefaultControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/api/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/engine/api/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/api/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/api/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/impl/AbstractEngine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/impl/Inline4Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/impl/Inline6Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/impl/V6Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/src/dto/vehicle/impl/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/beanconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/beanconfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,5 +84,36 @@
       <updated>1680880333110</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/src/App.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/src/App.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/src/App.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/src/controllers/impl/DefaultControllerImpl.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/src/util/commons/AppContextScope.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

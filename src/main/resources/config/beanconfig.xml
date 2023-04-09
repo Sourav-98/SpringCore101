@@ -3,12 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="AppContextScope" class="org.src.util.commons.AppContextScope"/>
+
     <bean id="Inline4Engine" class="org.src.dto.engine.impl.Inline4Engine">
         <!-- Bean instantiation using constructor arguments - Constructor Injection -->
         <constructor-arg index="0" value="344"/>
         <constructor-arg index="1" value="290"/>
         <constructor-arg index="2" value="14"/>
     </bean>
+
     <bean id="V6Engine" class="org.src.dto.engine.impl.V6Engine">
         <!-- Bean instantiation by setting up properties individually - Setter Injection -->
         <property name="horsePower" value="432"></property>
@@ -30,6 +33,57 @@
         <property name="exShowroomPrice" value="1109823"></property>
         <!-- Object Injection - using refs -->
         <property name="engine" ref="V6Engine"></property>
+    </bean>
+
+    <bean id="Truck" class="org.src.dto.vehicle.impl.Truck" name="HaulerTruck">
+        <property name="manufacturer" value="Daimler Truck"></property>
+        <property name="model" value="HWD 390"></property>
+        <property name="dateOfManufacture" value="12/05/2010"></property>
+        <property name="exShowroomPrice" value="1277532"></property>
+        <!-- Inner Bean Definition -->
+        <property name="engine">
+            <bean class="org.src.dto.engine.impl.Inline6Engine">
+                <property name="horsePower" value="320"></property>
+                <property name="torque" value="1594"></property>
+                <property name="fuelEconomy" value="3"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Alias to Beans-->
+    <alias name="Truck" alias="MonsterTruck"></alias>
+
+
+    <!-- Beans Auto-wiring -->
+
+    <bean id="pointA" class="org.src.dto.shapes.Point">
+        <constructor-arg index="0" value="0"></constructor-arg>
+        <constructor-arg index="1" value="0"></constructor-arg>
+    </bean>
+
+    <bean id="pointB" class="org.src.dto.shapes.Point">
+        <constructor-arg index="0" value="22"></constructor-arg>
+        <constructor-arg index="1" value="0"></constructor-arg>
+    </bean>
+
+    <bean id="pointC" class="org.src.dto.shapes.Point">
+        <constructor-arg index="0" value="-1"></constructor-arg>
+        <constructor-arg index="1" value="23"></constructor-arg>
+    </bean>
+
+    <!-- Manually configuring inner beans using refs -->
+    <bean id="triangle1" class="org.src.dto.shapes.Triangle">
+        <property name="pointA" ref="pointA"/>
+        <property name="pointB" ref="pointB"/>
+        <property name="pointC" ref="pointC"/>
+    </bean>
+
+    <!-- Auto-wire the inner bean refs by the bean variable name -->
+    <bean id="triangle2" class="org.src.dto.shapes.Triangle" autowire="byName">
+    </bean>
+
+    <bean id="defaultController" class="org.src.controllers.impl.DefaultControllerImpl">
+
     </bean>
 
 </beans>
