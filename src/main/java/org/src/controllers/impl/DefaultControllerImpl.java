@@ -1,18 +1,19 @@
 package org.src.controllers.impl;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.src.controllers.api.DefaultController;
 import org.src.controllers.api.EngineController;
 import org.src.controllers.api.VehicleController;
 import org.src.dto.engine.api.Engine;
 import org.src.dto.vehicle.api.Vehicle;
 import org.src.dto.vehicle.impl.SedanCar;
-import org.src.util.commons.AppContextScope;
 
-public class DefaultControllerImpl implements DefaultController, EngineController, VehicleController {
+public class DefaultControllerImpl implements DefaultController, EngineController, VehicleController, ApplicationContextAware, BeanNameAware {
 
-    private static ApplicationContext context = AppContextScope.getApplicationContext();
+    private static ApplicationContext context = null;
 
     @Override
     public String defaultHelloWorld() {
@@ -61,5 +62,15 @@ public class DefaultControllerImpl implements DefaultController, EngineControlle
         vehicle = (Vehicle) context.getBean("MonsterTruck");
         // Monster Truck is an alias for Truck bean
         System.out.println("Monster Truck: " + vehicle);
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.context = applicationContext;
+    }
+
+    @Override
+    public void setBeanName(String s) {
+        System.out.println("Bean name: " + s);
     }
 }

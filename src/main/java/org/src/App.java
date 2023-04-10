@@ -3,13 +3,7 @@ package org.src;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.src.controllers.api.DefaultController;
-import org.src.controllers.impl.DefaultControllerImpl;
-import org.src.dto.engine.api.Engine;
-import org.src.dto.engine.impl.AbstractEngineFactory;
 import org.src.dto.shapes.Triangle;
-import org.src.dto.vehicle.api.Vehicle;
-import org.src.dto.vehicle.impl.AbstractVehicleFactory;
-import org.src.util.commons.AppContextScope;
 
 /**
  * Hello world!
@@ -17,12 +11,9 @@ import org.src.util.commons.AppContextScope;
  */
 public class App
 {
-    static ApplicationContext context = AppContextScope.getApplicationContext();
-
     public static void main( String[] args )
     {
-
-
+        ApplicationContext context = new ClassPathXmlApplicationContext("config/beanconfig.xml");
         DefaultController defaultController = (DefaultController) context.getBean("defaultController");
         defaultController.performEngineConfigurations();
         defaultController.performVehicleConfigurations();

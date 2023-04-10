@@ -3,8 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="AppContextScope" class="org.src.util.commons.AppContextScope"/>
-
     <bean id="Inline4Engine" class="org.src.dto.engine.impl.Inline4Engine">
         <!-- Bean instantiation using constructor arguments - Constructor Injection -->
         <constructor-arg index="0" value="344"/>
